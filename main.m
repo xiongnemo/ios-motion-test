@@ -1,10 +1,9 @@
 // MotionTest: what CoreMotion gives an application, live -- a phone in 3D that turns as this one does (the device
 // motion's attitude, from where it was at the start or the last tap on it), and below the numbers: the
 // accelerometer, the gyroscope and the device motion (attitude, gravity, rotation rate, user acceleration,
-// heading). On the K40 all of it comes from the sensor DSP through libhakios.ui.dylib
-// (devices/redmi-k40/overlays/userland/src/inject_ui.c). The 3D is Core Animation's (no Metal here): six layers in a
-// CATransformLayer, their backs culled -- a box is convex, so that is all the hiding it needs.
-// work/wsl/mk-hello-ipa.sh builds it, unsigned, into MotionTest.ipa (mkicon.py its icon).
+// heading). Written for the iOS 16.5 port to the Redmi K40, where all of it comes from the phone's sensor DSP. The 3D
+// is Core Animation's (no Metal there): six layers in a CATransformLayer, their backs culled -- a box is convex, so
+// that is all the hiding it needs. build.sh builds it, unsigned, into MotionTest.ipa (mkicon.py its icon).
 #import <CoreMotion/CoreMotion.h>
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>

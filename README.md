@@ -18,7 +18,11 @@
 CC=xnu-clang SDK=$THEOS/sdks/iPhoneOS16.5.sdk ./build.sh     # Linux / WSL，需要能链接 iOS 的 clang + ld64
 ```
 
-也可以在 GitHub Actions 里手动运行 `build`（或推一个 `v*` 标签），IPA 会作为运行的产物保存。
+每次推送 GitHub Actions 都会在 macOS 上编一次（也可以手动运行 `build`），IPA 作为运行的产物保存。
+
+## 许可
+
+MIT，见 `LICENSE`。
 
 ## 文件
 

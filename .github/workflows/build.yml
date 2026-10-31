@@ -1,10 +1,8 @@
-# MotionTest.ipa on a macOS runner (Xcode's clang and SDK), kept as the run's artifact. Started by hand or by a
-# tag v*, not on every push: a private repository's macOS minutes count ten times.
+# MotionTest.ipa on a macOS runner (Xcode's clang and SDK), kept as the run's artifact: on every push, and by hand.
 name: build
 on:
   workflow_dispatch:
   push:
-    tags: ['v*']
 jobs:
   ipa:
     runs-on: macos-latest

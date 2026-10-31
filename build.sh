@@ -17,7 +17,9 @@ APP=$OUT/Payload/MotionTest.app
 
 rm -rf "$OUT/Payload" "$OUT/MotionTest.ipa"
 mkdir -p "$APP"
-$CC -arch arm64 -isysroot "$SDK" -miphoneos-version-min=15.0 -O1 -fobjc-arc \
+# (-target, not -arch and -miphoneos-version-min: a wrapper such as xnu-clang puts its own -target ios16.5 first, which
+# wins over -miphoneos-version-min, and the program then asked for iOS 16.5; the last -target is the one that counts)
+$CC -target arm64-apple-ios15.0 -isysroot "$SDK" -O1 -fobjc-arc \
 	-framework UIKit -framework Foundation -framework CoreMotion -framework CoreGraphics -framework QuartzCore \
 	-o "$APP/MotionTest" "$HERE/main.m"
 sed 's/\r$//' "$HERE/Info.plist" > "$APP/Info.plist"

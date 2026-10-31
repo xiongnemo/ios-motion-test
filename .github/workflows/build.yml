@@ -1,0 +1,17 @@
+# MotionTest.ipa on a macOS runner (Xcode's clang and SDK), kept as the run's artifact. Started by hand or by a
+# tag v*, not on every push: a private repository's macOS minutes count ten times.
+name: build
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+jobs:
+  ipa:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MotionTest-ipa
+          path: build/MotionTest.ipa

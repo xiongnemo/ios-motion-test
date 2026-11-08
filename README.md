@@ -1,5 +1,7 @@
 # Motion Test
 
+> 已并入 [System Check](https://github.com/xiongnemo/ios-system-check)（它的 Motion 页），以后在那边更新；这个仓库不再更新。
+
 一个看 iOS 运动传感器的小应用：加速度计、陀螺仪、姿态（roll / pitch / yaw）、重力、用户加速度、磁航向的实时数值，
 上面还有一个 3D 手机模型，跟着手机的姿态转。点一下模型，它就以当前姿态为起点，重新正对着你。
 

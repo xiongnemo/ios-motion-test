@@ -7,7 +7,7 @@
 
 最早是为了在 Redmi K40（alioth）上跑的 iOS 16.5 移植里测传感器而写的，普通 iOS 设备上一样能用。
 
-- 包名：`com.anzupop.com.ios.motiontest`
+- 包名：`com.anzupop.ios.motiontest`
 - 最低 iOS 15.0，只用 UIKit、Core Motion、Core Animation（3D 模型用 `CATransformLayer`，不需要 Metal）
 - 图标由 `mkicon.py` 生成（纯 Python，没有 asset catalog）
 
